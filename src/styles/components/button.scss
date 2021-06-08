@@ -1,0 +1,21 @@
+.button {
+  width: 258px;
+  height: 44px;
+  margin: 9px;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 3px;
+
+  &--primary {
+    background-image: linear-gradient(deeppink 0%, mediumvioletred 10% 90%, purple 100%);
+  }
+
+  &--secondary {
+    background-image: linear-gradient(lightblue 0%, cornflowerblue 10% 90%, royalblue 100%);
+  }
+
+  &:hover {
+    filter: brightness(1.1);
+    transition: filter 0.2s;
+  }
+}

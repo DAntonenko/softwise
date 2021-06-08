@@ -1,0 +1,82 @@
+.character-view {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-image: url(../../assets/character-view.png);
+  background-color: darkslateblue;
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 13vh;
+    right: 0;
+    z-index: 100;
+  }
+
+  &__tab {
+    position: relative;
+    display: block;
+    width: 165px;
+    height: 115px;
+    background-image: linear-gradient(100deg, darkslateblue 10%, midnightblue 30%, black 150%);
+    border: 1px solid black;
+    transform: skewX(11deg) translateX(27px);
+    transition: transform 0.2s;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    &:active,
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 5px lightsteelblue;
+      transform: skewX(11deg) translateX(10px);
+
+      & .character-view__tab-overlay {
+        display: none;
+      }
+    }
+  }
+
+  &__tab-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+  }
+
+  &__tab-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 96px;
+    height: 100%;
+    padding: 15px 0 15px 25px;
+    transform: skewX(-11deg);
+  }
+
+  &__tab-icon {
+    filter: brightness(2);
+  }
+
+  &__tab-name {
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  &__manage-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    width: 832px;
+    margin: 0 auto;
+  }
+
+  &__lower-buttons-block {
+    padding: 10px 2px;
+  }
+}
